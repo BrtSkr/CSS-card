@@ -1,65 +1,139 @@
-*{
+* {
     margin: 0;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
     margin: auto;
     scroll-behavior: smooth;
     max-width: 100%;
     padding: 0;
     box-sizing: border-box;
 }
+ul{
+    padding: 0;
+    margin: 0;
+}
 
-.card{
-    border: 3px solid black;
+.card-background{
+    margin: 10vh auto;
+    padding: 2vh;
+}
+.card {
     border-radius: 20px;
-    max-width: 20%;
+    max-width: 45vh;
     background-color: white;
     margin: auto;
     text-align: center;
-    font-size: 2vw;
+    font-size: 2.7vh;
     padding-bottom: 1vh;
+    box-shadow: .5px .5px 30px black;
 }
-
-.card *{
+//sets everything inside card to the center
+.card * {
     margin: auto;
-  
 }
-.card button{
+//element with image inside of it (above "order summary")
+.hero{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+//every button inside card is displayed in block
+.card button {
     display: block;
-    margin-top: 1vh;
+    cursor: pointer;
 }
-.payment{
-    background-color: rgb(59, 59, 255);
-    min-width: 90%;
+.card-header{
+    font-size: 3vh;
+    font-family: sans-serif;
+    margin-top: 3vh;
+}
+.card-description{
+    color: gray;
+    font-size: 2vh;
+    margin-top: 2vh;
+    max-width: 80%;
+    letter-spacing: 0.2px;
+    word-spacing: -1px;
+}
+.payment-button {
+    background-color: rgb(27, 27, 255);
+    min-width: 80%;
     min-height: 5vh;
     border: white;
     border-radius: 5px;
+    font-weight: 800;
+    color: white;
+    font-size: 1.5vh;
+    box-shadow: 1px 1px 20px 1px black;
+    margin-top: 3vh;
+    transition: 0.5s;
 }
-.cancel-order{
+.price{
     color: gray;
+}
+.cancel-order {
+    color: rgb(92, 92, 92);
+    font-weight: 1000;
     border: none;
     background-color: white;
-
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    transition: 0.5s;
 }
-.plan{
-    border: 3px solid black;
-    border-radius: 30px;
+
+.plan {
+    border-radius: 10px;
     max-width: 80%;
-    margin: auto;
+    min-height: 10vh;
+    background-color: rgb(206, 206, 238);
     margin-top: 3vh;
     display: flex;
-    flex: 1 1 25%;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-align-content: center;
-    
-    font-size: 1.5vw;
+    flex-direction: row;
+    flex: 1 1;
+    flex-basis: 33%;
+    flex-wrap: wrap;
+    font-size: 1.7vh;
 }
-img{
+.plan img{
+    max-width: 15%;
+}
+.order-details{
+    list-style-type: none;
+    transform: translatex(-1.5vw);
+}
+.current-plan{
+    font-weight: 800;
+}
+.change-plan{
+    text-decoration: underline;
+    color: blue;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-weight: 800;
+    transition: 0.5s;
+}
+
+//active states
+.cancel-order:hover{
+    color: rgb(46, 46, 46);
+    transition: 0.3s;
+}
+.payment-button:hover{
+    background-color: rgba(27, 27, 255, 0.856);
+    transition: 0.3s;
+}
+.change-plan:hover{
+    color: rgb(62, 62, 255);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+img {
     max-width: 100%;
 }
